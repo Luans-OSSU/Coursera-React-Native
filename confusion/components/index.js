@@ -1,4 +1,5 @@
 import Menu from './MenuComponent';
+import DishDetail from './DishDetailComponent';
 
 
-export { Menu };
+export { Menu, DishDetail };

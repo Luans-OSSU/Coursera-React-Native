@@ -3,7 +3,7 @@ import { FlatList, View } from 'react-native'
 import { ListItem } from 'react-native-elements'
 
 
-const MenuComponent = ({dishes}) => {
+const MenuComponent = ({dishes, onPress}) => {
 
     const renderMenuItem = ({item, index}) => {
         return (
@@ -12,6 +12,7 @@ const MenuComponent = ({dishes}) => {
                 title={item.name}
                 subtitle={item.description}
                 hideChevron={true}
+                onPress={() => onPress(item.id)}
                 leftAvatar={{source: require("../assets/food/uthappizza.png")}}
             />
         )
